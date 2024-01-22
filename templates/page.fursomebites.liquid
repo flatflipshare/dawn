@@ -26,16 +26,25 @@
     >
 
     <style>
-      :root {
-      	--font-heading-family: 'Fredoka', sans-serif;
-      	--font-heading-weight: 400;
+          @font-face {
+            font-family: "Fredoka One";
+            src: url("{{ 'FredokaOne-Regular.woff2' | asset_url }}") format('woff2'),
+                 url("{{ 'FredokaOne-Regular.woff' | asset_url }}") format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+          :root {
+            --font-test-family: 'Fredoka One', sans-serif;
+          	--font-heading-family: 'Fredoka', sans-serif;
+          	--font-heading-weight: 400;
 
-      	--font-body-family: 'Lato', sans-serif;
-      	--font-body-weight: normal;
+          	--font-body-family: 'Lato', sans-serif;
+          	--font-body-weight: normal;
 
-      	--base-font-size: 1.5rem;
-      	--html-font-size: 100%;
-      }
+          	--base-font-size: 1.5rem;
+          	--html-font-size: 100%;
+          }
     </style>
 
     <link rel="preload" href="{{ 'lp-base.min.css' | asset_url }}" as="style">
@@ -644,7 +653,9 @@
               </div>
               <div class="bold-banner__info">
                 <h3 class="bold-banner__heading heading hidden-lg-down">Exclusive offer just for you!</h3>
-                <h3 class="bold-banner__heading bold-banner__heading--secondary heading hidden-lg-up">Special Promo Alert!</h3>
+                <h3 class="bold-banner__heading bold-banner__heading--secondary heading hidden-lg-up">
+                  Special Promo Alert!
+                </h3>
                 <div class="bold-banner__paragraph">
                   <p class="bold-banner__text paragraph heading"><b>2+1</b>Buy 2, get 1 FREE</p>
                   <p class="bold-banner__text paragraph heading"><b>3+2</b>Buy 3, get 2 FREE</p>
