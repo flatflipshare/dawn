@@ -16,11 +16,17 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    >
 
     <style>
-      
+
       :root {
       	--font-heading-family: 'Fredoka', sans-serif;
       	--font-heading-weight: 400;
@@ -166,6 +172,56 @@
                   </div>
                 </section>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="is-section scroll-trigger animate--slide-in">
+          <link rel="stylesheet" href="{{ 'lp-image-with-text-component.min.css' | asset_url }}">
+
+          <div class="wrapper">
+            <div class="image-with-text clearfix">
+              <picture class="responsive-img right">
+                <source
+                  srcset="{{ 'tpl_02-desktop.jpg' | asset_url }}"
+                  media="(min-width: 1281px)"
+                >
+                <source
+                  srcset="{{ 'tpl_02-tablet.jpg' | asset_url }}"
+                  media="(min-width: 576px)"
+                >
+                <source
+                  srcset="{{ 'tpl_02-mobile.jpg' | asset_url }}"
+                  media="(min-width: 1px)"
+                >
+                <img
+                  class="responsive-img"
+                  fetchpriority="low"
+                  decoding="async"
+                  width="522"
+                  height="680"
+                  src=""
+                  alt=""
+                >
+              </picture>
+              <h2 class="heading section-heading">Why does your pup need allergy & immune bites?</h2>
+              <p class="paragraph">
+                Just like humans, dogs can suffer from a variety of allergy-related issues, impacting their quality of
+                life significantly. In fact, studies show that up to 60% of dogs suffer from some form of allergy. This
+                can be particularly challenging for pet owners, as dogs cannot communicate their discomfort and symptoms
+                as humans can.
+              </p>
+              <p class="paragraph paragraph--bold">
+                Fursome Allergy & Immune Bites are expertly crafted to address these common concerns:
+              </p>
+              <p class="paragraph">
+                - Allergy-related itching, discomfort, and skin issues <br>
+                - Costly vet visits for allergy treatments <br>
+                - Frequent digestive problems and food sensitivities <br>
+                - Uncertainty about how to support a dog's immune system <br>
+                - Susceptibility to illnesses and infections <br>
+                - Desire for a holistic solution for dog's overall health
+              </p>
             </div>
           </div>
         </section>
