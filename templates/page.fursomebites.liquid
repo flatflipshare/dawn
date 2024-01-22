@@ -123,11 +123,11 @@
                         media="(min-width: 1281px)"
                       >
                       <source
-                        srcset="/img/tpl_01-tablet.png 1x, /img/tpl_01-tablet@2x.png 2x, /img/tpl_01-tablet@3x.png 3x"
+                        srcset="{{ 'tpl_01-tablet.png' | asset_url }} 1x, {{ 'tpl_01-tablet@2x.png' | asset_url }} 2x, {{ 'tpl_01-tablet@3x.png' | asset_url }} 3x"
                         media="(min-width: 576px)"
                       >
                       <source
-                        srcset="/img/tpl_01-mobile.png 1x, /img/tpl_01-mobile@2x.png 2x, /img/tpl_01-mobile@3x.png 3x"
+                        srcset="{{ 'tpl_01-mobile.png' | asset_url }} 1x, {{ 'tpl_01-mobile@2x.png' | asset_url }} 2x, {{ 'tpl_01-mobile@3x.png' | asset_url }} 3x"
                         media="(min-width: 1px)"
                       >
                       <img
@@ -146,7 +146,7 @@
                       decoding="async"
                       width="315"
                       height="346"
-                      src="/img/product_01-desktop.png"
+                      src="{{ 'product_01-desktop.png' | asset_url }}"
                       alt=""
                     >
                   </section>
