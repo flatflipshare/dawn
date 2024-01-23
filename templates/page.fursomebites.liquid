@@ -16,20 +16,8 @@
     
     <link rel="dns-prefetch" href="https://cdn.shopify.com">
     {{ 'FredokaOne-Regular.woff2' | file_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
-    <link
-      rel="preload"
-      href="https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    >
-    <link
-      rel="preload"
-      href="https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    >
+    {{ 'Lato-Regular.woff2' | file_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+    {{ 'Lato-Bold.woff2' | file_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
     <style>
       @font-face {
         font-family: "Fredoka One";
@@ -41,28 +29,29 @@
       }
       @font-face {
        font-family: 'Lato';
-       src: url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Regular.woff2") format('woff2'),
-           url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Regular.woff") format('woff');
+       src: url("{{ 'Lato-Regular.woff2' | file_url }}") format('woff2'),
+           url("{{ 'Lato-Regular.woff' | file_url }}") format('woff');
        font-weight: normal;
        font-style: normal;
        font-display: swap;
       }
       @font-face {
         font-family: 'Lato';
-        src: url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Italic.woff2") format('woff2'),
-             url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Italic.woff") format('woff');
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Lato';
-        src: url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Bold.woff2") format('woff2'),
-             url("https://cdn.shopify.com/s/files/1/0064/7115/5783/files/Lato-Bold.woff") format('woff');
+        src: url("{{ 'Lato-Bold.woff2' | file_url }}") format('woff2'),
+             url("{{ 'Lato-Bold.woff' | file_url }}") format('woff');
         font-weight: bold;
         font-style: normal;
         font-display: swap;
       }
+      @font-face {
+        font-family: 'Lato';
+        src: url("{{ 'Lato-Italic.woff2' | file_url }}") format('woff2'),
+             url("{{ 'Lato-Italic.woff' | file_url }}") format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
+
       :root {
       	--font-heading-family: 'Fredoka One', sans-serif;
       	--font-heading-weight: 400;
